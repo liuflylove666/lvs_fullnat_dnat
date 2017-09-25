@@ -18,5 +18,6 @@ sed -i 's/# % define buildid .local/%define buildid .lvs/g' ~/rpmbuild/SPECS/ker
 sudo spectool -g ~/rpmbuild/SPECS/kernel.spec
 sudo yum-builddep ~/rpmbuild/SPECS/kernel.spec
 rpmbuild -bb --without kabichk ~/rpmbuild/SPECS/kernel.spec
-
+or
+rpmbuild --bb --without kabichk --with firmware ~/rpmbuild/SPECS/kernel.spec 
 ls -alt ~/rpmbuild/RPMS/x86_64/
